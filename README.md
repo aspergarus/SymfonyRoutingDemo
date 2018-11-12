@@ -1,4 +1,4 @@
-#This repository was made in educational purposes, in order to find out how symfony routing works.
+## This repository was made in educational purposes, in order to find out how symfony routing works.
 
 To run app:
 

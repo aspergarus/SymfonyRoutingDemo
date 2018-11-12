@@ -1,0 +1,9 @@
+dogsRead:
+    path: /
+    controller: App\Controller\DogsController::readAllAction
+    methods: [ GET ]
+
+dogRead:
+    path: /{id}
+    controller: App\Controller\DogsController::readAction
+    methods: [ GET ]

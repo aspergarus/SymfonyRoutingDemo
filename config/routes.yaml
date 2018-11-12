@@ -1,0 +1,20 @@
+sub.route:
+    path: /
+    host: "sub.{domain}"
+    controller: App\Controller\DefaultController::sub
+    defaults:
+        domain: '%domain%'
+    requirements:
+        domain: '%domain%'
+
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+api.v1.dogs:
+    prefix: /api/v1/dogs
+    resource: ./routes/api.v1.dogs.yml
+
+api.v1.fogs:
+    prefix: /api/v1/fogs
+    resource: ./routes/api.v1.fogs.yml

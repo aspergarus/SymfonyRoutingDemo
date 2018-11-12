@@ -1,0 +1,9 @@
+fogsRead:
+    path: /
+    controller: App\Controller\FogsController::readAllAction
+    methods: [ GET ]
+
+fogRead:
+    path: /{id}
+    controller: App\Controller\FogsController::readAction
+    methods: [ GET ]

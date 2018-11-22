@@ -7,3 +7,13 @@ dogRead:
     path: /{id}
     controller: App\Controller\DogsController::readAction
     methods: [ GET ]
+    requirements:
+        id: '\d+'
+
+dogInfo:
+    path: /more/{id}.{format}
+    controller: App\Controller\DogsController::readAction
+    methods: [ GET ]
+    requirements:
+        id: '\d+'
+        format: 'json|rss|html'

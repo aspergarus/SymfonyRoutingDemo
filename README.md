@@ -10,6 +10,14 @@ To run composer install:
 
 > docker-compose.exe up composer
 
+To run php script:
+
+> docker-compose.exe run php script.php
+
+Example:
+
+> docker-compose.exe run php bin/console debug:router
+
 Routes are done:
 * http://localhost
 * http://localhost/api/v1/dogs

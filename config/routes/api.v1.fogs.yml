@@ -7,3 +7,4 @@ fogRead:
     path: /{id}
     controller: App\Controller\FogsController::readAction
     methods: [ GET ]
+    condition:  "request.headers.get('User-Agent') matches '/Firefox/i'"

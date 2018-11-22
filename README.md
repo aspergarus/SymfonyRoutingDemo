@@ -2,21 +2,21 @@
 
 To run app:
 
-> ./bin/console server:run 0.0.0.0:8080
-
-Or via docker:
-
 > docker-compose.exe up web
 
-Then open http://localhost:8080
+Then open http://localhost
+
+To run composer install:
+
+> docker-compose.exe up composer
 
 Routes are done:
-* http://localhost:8080
-* http://localhost:8080/api/v1/dogs
-* http://localhost:8080/api/v1/dogs/{id}
-* http://localhost:8080/api/v1/fogs
-* http://localhost:8080/api/v1/fogs/{id}
-* http://localhost:8080/api/v1/cats
-* http://localhost:8080/api/v1/cats/{id}
+* http://localhost
+* http://localhost/api/v1/dogs
+* http://localhost/api/v1/dogs/{id}
+* http://localhost/api/v1/fogs
+* http://localhost/api/v1/fogs/{id} (works only in firefox)
+* http://localhost/api/v1/cats
+* http://localhost/api/v1/cats/{id}
 
-And special route for subdomain. You need to copy .env_dist to .env and fill it with your own hostname. Then open http://sub.{your_host_name}:8000
+And special route for subdomain. You need to copy .env_dist to .env and fill it with your own hostname. Then open http://sub.{your_host_name}

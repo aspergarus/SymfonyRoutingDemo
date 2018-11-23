@@ -1,0 +1,13 @@
+profileRead:
+    path: /read
+    controller: App\Controller\ProfileController::readProfile
+    methods: [ GET ]
+    defaults:
+        oauth.auth: false
+
+profileUpdate:
+    path: /update
+    controller: App\Controller\ProfileController::updateProfile
+    methods: [ GET ]
+    defaults:
+        oauth.auth: true

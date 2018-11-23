@@ -1,0 +1,11 @@
+dir2Read:
+    path: /dir2
+    controller: App\Controller\DirController::feadSecond
+    methods: [ GET ]
+
+dir2ReadId:
+    path: /dir2/{id}
+    controller: App\Controller\DirController::feadSecondId
+    methods: [ GET ]
+    requirements:
+        id: '\d+'

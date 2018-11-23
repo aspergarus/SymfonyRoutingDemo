@@ -26,5 +26,10 @@ Routes are done:
 * http://localhost/api/v1/fogs/{id} (works only in firefox)
 * http://localhost/api/v1/cats
 * http://localhost/api/v1/cats/{id}
+* http://localhost/api/v1/default (example of default parameters)
+* http://localhost/dir/ (example of subroutes from directory)
+* http://localhost/dir/{id} (example of subroutes from directory)
+* http://localhost/dir/dir2 (example of subroutes from directory)
+* http://localhost/dir/dir2/{id} (example of subroutes from directory)
 
 And special route for subdomain. You need to copy .env_dist to .env and fill it with your own hostname. Then open http://sub.{your_host_name}

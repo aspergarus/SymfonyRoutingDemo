@@ -25,3 +25,8 @@ default:
     methods: [ GET ]
     defaults:
       state: Currently stable
+
+dir:
+    prefix: /dir
+    resource: ./routes/bunch_of_routes
+    type: directory

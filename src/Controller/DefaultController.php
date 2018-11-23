@@ -13,4 +13,9 @@ class DefaultController
     function sub() {
         return new Response("Hello from sub domain logic");
     }
+
+    function default($state) {
+        return new Response("My state is always with me: $state");
+    }
+
 }

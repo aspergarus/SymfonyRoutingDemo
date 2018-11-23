@@ -18,3 +18,10 @@ api.v1.dogs:
 api.v1.fogs:
     prefix: /api/v1/fogs
     resource: ./routes/api.v1.fogs.yml
+
+default:
+    path: /default/{state}
+    controller: App\Controller\DefaultController::default
+    methods: [ GET ]
+    defaults:
+      state: Currently stable

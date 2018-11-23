@@ -4,7 +4,7 @@ services:
   web:
     image: phppm/nginx
     ports:
-      - "80:80"
+      - "85:80"
     volumes:
       - ./:/var/www/
     tty: true

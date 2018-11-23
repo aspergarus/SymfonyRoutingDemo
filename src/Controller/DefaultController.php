@@ -6,7 +6,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class DefaultController extends AbstractController
 {
     function index() {
@@ -14,7 +13,9 @@ class DefaultController extends AbstractController
             'localesExample',
             ['_locale' => 'ua']
         );
-        return new Response("Default controller. $url");
+
+        $a = "<a href='$url'>About us</a>";
+        return new Response("<span>Default controller. Check out localized link about us: $a</span>");
     }
 
     function sub() {

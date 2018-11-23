@@ -35,10 +35,11 @@ class ProfileController
      * @throws \Exception
      */
     private function auth($request) {
-        $ssoEnabled = $request->attributes->get('sso.auth');
+        $oauthEnabled = $request->attributes->get('oauth');
+
         $token = $request->query->get('token');
 
-        if ($ssoEnabled && empty($token)) {
+        if ($oauthEnabled && empty($token)) {
             throw new \Exception("You are not authorized");
         }
     }

@@ -3,11 +3,11 @@ profileRead:
     controller: App\Controller\ProfileController::readProfile
     methods: [ GET ]
     defaults:
-        oauth.auth: false
+        oauth: false
 
 profileUpdate:
     path: /update
     controller: App\Controller\ProfileController::updateProfile
     methods: [ GET ]
     defaults:
-        oauth.auth: true
+        oauth: true

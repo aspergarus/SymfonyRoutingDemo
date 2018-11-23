@@ -21,6 +21,10 @@ localesExample:
         ua: /pro_nas
     controller: App\Controller\DefaultController::locale
 
+api.v1.dogs:
+    prefix: /api/v1/dogs
+    resource: ./routes/api.v1.dogs.yml
+
 api.v1.fogs:
     prefix: /api/v1/fogs
     resource: ./routes/api.v1.fogs.yml

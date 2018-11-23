@@ -2,14 +2,19 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 
-class DefaultController
+class DefaultController extends AbstractController
 {
     function index() {
-        return new Response("Default controller");
+        $url = $this->generateUrl(
+            'localesExample',
+            ['_locale' => 'ua']
+        );
+        return new Response("Default controller. $url");
     }
 
     function sub() {

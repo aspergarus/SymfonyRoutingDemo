@@ -1,15 +1,41 @@
 version: '3'
 
+networks:
+  app-tier:
+    driver: bridge
+
 services:
   web:
-    image: phppm/nginx
-    ports:
-      - "8000:80"
+    image: php:7.2-cli
     volumes:
-      - ./:/var/www/
+      - ./:/app
+    working_dir: /app
     tty: true
-    stdin_open: true
-    command: --debug=1 --static-directory=public/ --bootstrap=symfony
+    ports:
+      - 8000:1111
+    command: php -S 0.0.0.0:1111 -t public/
+
+  fpm:
+    image: bitnami/php-fpm:latest
+    ports:
+      - '9000:9000'
+    tty: true
+    networks:
+      - app-tier
+    volumes:
+      - ./:/app
+
+  nginx:
+    image: bitnami/nginx:latest
+    depends_on:
+      - fpm
+    networks:
+      - app-tier
+    ports:
+      - '8005:5000'
+      - '443:443'
+    volumes:
+      - ./deploy/nginx.vhost.conf:/opt/bitnami/nginx/conf/vhosts/yourapp.conf
 
   composer:
     restart: 'no'

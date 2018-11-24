@@ -4,11 +4,27 @@ To run app:
 
 > docker-compose.exe up web
 
-Then open http://localhost
+Then open [localhost:8000](http://localhost:8000)
+
+***
+
+To run app through php-fpm + nginx:
+
+> docker-compose.exe up nginx
+
+Then open [localhost:8005](http://localhost:8005)
+
+Read more:
+- [nginx config](https://symfony.com/doc/current/setup/web_server_configuration.html)
+- [nginx & php-fpm docker](https://hub.docker.com/r/bitnami/php-fpm/)
+
+***
 
 To run composer install:
 
 > docker-compose.exe up composer
+
+***
 
 To run php script:
 
@@ -18,18 +34,6 @@ Example:
 
 > docker-compose.exe run php bin/console debug:router
 
-Routes are done:
-* http://localhost
-* http://localhost/api/v1/dogs
-* http://localhost/api/v1/dogs/{id}
-* http://localhost/api/v1/fogs
-* http://localhost/api/v1/fogs/{id} (works only in firefox)
-* http://localhost/api/v1/cats
-* http://localhost/api/v1/cats/{id}
-* http://localhost/api/v1/default (example of default parameters)
-* http://localhost/dir/dir1 (example of subroutes from directory)
-* http://localhost/dir/dir1/{id} (example of subroutes from directory)
-* http://localhost/dir/dir2 (example of subroutes from directory)
-* http://localhost/dir/dir2/{id} (example of subroutes from directory)
+***
 
-And special route for subdomain. You need to copy .env_dist to .env and fill it with your own hostname. Then open http://sub.{your_host_name}
+There is special route for subdomain. You need to copy .env_dist to .env and fill it with your own hostname. Then open http://sub.{your_host_name}

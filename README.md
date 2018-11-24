@@ -37,3 +37,9 @@ Example:
 ***
 
 There is special route for subdomain. You need to copy .env_dist to .env and fill it with your own hostname. Then open http://sub.{your_host_name}
+
+***
+
+TODO:
+- Implement phpunit via docker
+- Implement xdebug via docker

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ProfileController
@@ -11,7 +12,7 @@ class ProfileController
      * @return Response
      * @throws \Exception
      */
-    public function readProfile($request)
+    public function readProfile(Request $request)
     {
         $this->auth($request);
 
@@ -23,7 +24,7 @@ class ProfileController
      * @return Response
      * @throws \Exception
      */
-    public function updateProfile($request)
+    public function updateProfile(Request $request)
     {
         $this->auth($request);
 
